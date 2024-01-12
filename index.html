@@ -1,0 +1,88 @@
+
+<!DOCTYPE hmtl>
+
+<hmtl>
+    <head>
+        <link rel="stylesheet" href="styles.css"/>
+
+        <link rel=“icon” href="images/favicon.ico" type=“image/x-icon”>
+        <link rel=“shortcut icon” href=“images/favicon.ico” type=“image/x-icon”>
+        <title>Happy Birthday Cassie</title>
+        <meta name="description" content="Hopefully this will turn out good">
+        <script src="index.js"></script>
+    </head>
+    
+    <body>
+
+        <div class="Container">
+            <h1>Would You Like There To Be Sound?</h1>
+            <button class="Yes-Sound OptionButton" onclick="PlayMusic()">Yes</button>
+            <button class="No-Sound OptionButton" style="float: right;" onclick=" ScreenOneComplete()" >No</button>
+        </div>
+        
+       
+         <!--Screen1-->
+        
+        <div class="Box MoveBoxLeft"></div>
+        <div class="Box MoveBoxRight" style="left: 50%;"></div>
+        <audio src="Music.mp3" loop style="display: none; position: absolute;" id="Music"></audio>
+        <audio src="Wrong.mp3" style="display: none;" id="WrongSound"></audio>
+        <audio src="Right.MP3" style="display: none;" id="RightSound"></audio>
+        <audio src="BirthdaySound.mp3" style="display: none;" id="BirthdaySound"></audio>
+        <!--Screen 2-->
+        
+        <div class="Background2 MoveBackground2Up" style="background-image: linear-gradient(rgb(0, 174, 255), rgb(96, 205, 255));"></div>
+        <div class="Background2 MoveBackground2Down" style="top: 50%; background-image: linear-gradient(rgb(96, 205, 255), rgb(188, 234, 255))"></div>
+        <div class="PasswordContainer">
+            <h1 style="position: absolute; width: 100%; height: 70%; text-align: center; font-size: 3vw;">Guess The<br>Password</h1>
+            <input placeholder="Password.."></input>
+        
+        </div>
+        <div class="WrongBox">
+            <h1 style="font-size: 1.3vw; text-align: center; line-height: 200%;">Wrong Answer Try Again</h1>
+        </div>
+        <div class="RightBox">
+            <h1 style="font-size: 2vw; text-align: center; line-height: 50%;">Correct</h1>
+        </div>
+
+
+        <div class="HintBox1" style="left: 50%; bottom: 10%;">
+            <h2 style="vertical-align: text-top; position: absolute; top: -20%; left: 20%; text-align: center;" >How old are<br> you today?</h1>
+        </div>
+
+
+        <div class="HintBox2" style="left: 0%; bottom: 70%;">
+            <h1 style=" text-align: center; line-height: 0%;">Its a number</h1>
+        </div>
+
+
+        <!--Final Screen  top:-50%;  top: 100%;-->
+        <div class="Background3 MoveBackground3Up" style="top:-50%; background-image: linear-gradient(rgb(255, 148, 148), rgb(255, 173, 173));">
+            <h3 class="Reveal">Happy Birthday To <br>The Sweetest/Prettiest Girl <br> In The World</h3>
+            <h4 class="RevealOpen"> HAPPY BIRTHDAY CASSIE</h4>
+            
+        </div>
+        <img class="RevealOpen" style="z-index: 5; position: absolute; transform: translate(-50%); left: 50%; width: 30vw; bottom: 20%; visibility: hidden;" src="Birthday.png"><img>
+        <div class="Background3 MoveBackground3Down" style="top: 100%;; background-image: linear-gradient(rgb(255, 173, 173), rgb(255, 214, 214))">
+            <button class="Reveal Hello" onmousedown="HappyBirthdayCassie()"> Wait who is this Girl?<br>Press To Find Who!!</button>
+        </div>
+
+        <div class="heart">
+         
+        </div>
+        <img src="Pretty_Girl.jpg" style="position: absolute;  left:  80%; bottom: 30%; z-index: 100; visibility: hidden;" class="Pretty_Girl" width="200px"><img>
+
+        <canvas id="my-canvas"></canvas>
+
+        <script src="index.min.js"></script>
+        <script>
+            var confettiElement = document.getElementById('my-canvas');
+            var confettiSettings = { target: confettiElement };
+            var confetti = new ConfettiGenerator(confettiSettings);
+            confetti.render();
+            
+        </script>
+        
+    </body>
+
+</hmtl>
